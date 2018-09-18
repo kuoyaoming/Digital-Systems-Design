@@ -23,9 +23,9 @@ hw3 u1 (
     .write(write),
     .write_value(write_value),
     .write_complete(write_complete),    
-    //.read(read),
-    //.read_value(read_value),
-    //.read_complete(read_complete),   
+    .read(read),
+    .read_value(read_value),
+    .read_complete(read_complete),   
     // spi bus
     .spi_csn(spi_csn),
     .spi_sck(spi_sck),

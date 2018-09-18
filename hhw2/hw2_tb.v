@@ -2,7 +2,7 @@
 
 module hw2_tb;
 
-parameter BIT_PERIOD      = 8680; // (1/115200)*1,000,000,000
+parameter BIT_PERIOD      = 8680; // (1/115200)*1000000000
 
 reg clk_50M;
 reg reset_n;
