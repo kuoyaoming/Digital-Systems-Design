@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr 24 15:32:48 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : hhw2
+Top-level Entity Name : hw2
+Family : Cyclone IV E
+Total logic elements : 40
+    Total combinational functions : 31
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

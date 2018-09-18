@@ -1,0 +1,22 @@
+C:/Users/kuo/Desktop/hw3/hw3_tb.v {1 {vlog -work work -stats=none C:/Users/kuo/Desktop/hw3/hw3_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hw3_tb
+
+Top level modules:
+	hw3_tb
+
+} {} {}} C:/Users/kuo/Desktop/hw3/M25AA010A.v {1 {vlog -work work -stats=none C:/Users/kuo/Desktop/hw3/M25AA010A.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module M25AA010A
+
+Top level modules:
+	M25AA010A
+
+} {} {}} C:/Users/kuo/Desktop/hw3/hw3.v {1 {vlog -work work -stats=none C:/Users/kuo/Desktop/hw3/hw3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hw3
+
+Top level modules:
+	hw3
+
+} {} {}}

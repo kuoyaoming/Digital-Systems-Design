@@ -1,0 +1,256 @@
+module hw3(
+	clk_50M,
+	reset_n,    
+	write,
+	write_value,
+	write_complete,    
+	spi_csn,
+	spi_sck,
+	spi_do,
+	spi_di
+	);
+
+input clk_50M;
+input reset_n;
+input write;
+input[7:0] write_value;
+
+output write_complete;
+output spi_csn;
+output spi_sck;
+output spi_do;
+output spi_di;
+
+reg write_complete=0;
+reg spi_csn=0;
+reg spi_sck=0;
+reg f_4sck=0;
+reg f_hsck=0;
+reg f_1k=0;
+reg f_r=1;
+reg [3:0] ST=0;
+reg [3:0] SST=0;
+reg [7:0] cnt=0;
+reg [7:0] i=0;
+reg [23:0] data=0;
+
+assign spi_do = data[0];
+//======================================(clk)
+always @(posedge clk_50M) begin
+	if(f_r) begin
+		f_hsck <= 0;
+		f_4sck <= 0;
+		cnt <= 0;
+	end
+	else begin
+		if(cnt>=25) begin
+			f_hsck <= 1;
+		end
+		else begin
+			f_hsck <= f_hsck;
+		end
+		if(cnt>=200) begin
+			f_4sck <= 1;
+		end
+		else begin
+			f_4sck <= f_4sck;
+		end
+		if(cnt>=1000) begin
+			f_1k <= 1;
+		end
+		else begin
+			f_1k <= f_1k;
+		end
+		cnt <= cnt+1;
+	end
+end
+//======================================(main)
+always @(posedge clk_50M) begin
+
+	case(ST)
+		0: begin
+			if(write==1) begin
+				data[7:0] <= write_value;
+				if(!f_1k) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					write_complete <= 1;
+					ST <= 1;
+					f_r <= 1;
+				end
+			end
+		end
+		
+		1: begin
+			write_complete <= 0;
+			if(data==8'h06) begin
+				ST <= 2;
+			end
+			if(data==8'h02) begin
+				ST <= 4;
+			end
+		end
+//======================================(WREN)	
+
+//======================================(send data)	
+		2: begin
+			spi_csn <= 0;
+			ST <= 3;
+		end
+		
+		3: begin
+			if(SST==0) begin //delay 4 SCK
+				if(!f_4sck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 1;
+					f_r <= 1;
+				end
+			end
+			if(SST==1) begin //SCK ON
+				spi_sck <= 1;
+				if(!f_hsck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 2;
+					f_r <= 1;
+				end
+				SST <= 2;
+			end
+			if(SST==2) begin //SCK OFF( 1 clk )
+				spi_sck <= 0;
+				data <= {1'b0,data};
+				i <= i+1;
+				if(!f_hsck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 3;
+					f_r <= 1;
+				end
+			end
+			if(SST==3) begin //done
+				if(i>7) begin
+					i <= 0;
+					SST <= 4;
+				end
+				else begin
+					SST <= 1;
+				end
+			end
+			if(SST==4) begin //delay 4 SCK
+				spi_sck <= 0;
+				if(!f_4sck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					spi_csn <= 1;
+					SST <= 0;
+					ST <= 0;
+					f_r <= 1;
+				end
+			end
+		end
+//======================================(WRITE)	
+
+//======================================(Latch addr)		
+		4: begin
+			if(write==1) begin
+				data[15:8] <= write_value;
+				if(!f_1k) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					write_complete <= 1;
+					ST <= 1;
+					f_r <= 1;
+				end
+				ST <= 5;
+			end
+		end
+//======================================(Latch data)
+		5: begin
+			write_complete <= 0;
+			if(write==1) begin
+				data[23:16] <= write_value;
+				if(!f_1k) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					write_complete <= 1;
+					ST <= 1;
+					f_r <= 1;
+				end
+				ST <= 6;
+			end
+		end
+//======================================(send data)		
+		6: begin
+			write_complete <= 0;
+			spi_csn <= 0;
+			if(SST==0) begin //delay 4 SCK
+				if(!f_4sck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 1;
+					f_r <= 1;
+				end
+			end
+			if(SST==1) begin //SCK ON
+				spi_sck <= 1;
+				if(!f_hsck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 2;
+					f_r <= 1;
+				end
+				SST <= 2;
+			end
+			if(SST==2) begin //SCK OFF( 1 clk )
+				spi_sck <= 0;
+				data <= {1'b0,data};
+				i <= i+1;
+				if(!f_hsck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					SST <= 3;
+					f_r <= 1;
+				end
+			end
+			if(SST==3) begin //done
+				if(i>23) begin
+					i <= 0;
+					SST <= 4;
+				end
+				else begin
+					SST <= 1;
+				end
+			end
+			if(SST==4) begin//delay 4 SCK
+				spi_sck <= 0;
+				if(!f_4sck) begin
+					f_r <= 1'b0;
+				end
+				else begin
+					spi_csn <= 0;
+					SST <= 0;
+					ST <= 0;
+					f_r <= 1;
+				end
+			end
+		end
+		
+		default: begin
+			//ST <= 0;
+			SST <= 0;
+			i <= 0;
+		end
+	endcase
+end
+endmodule

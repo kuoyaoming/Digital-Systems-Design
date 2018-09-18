@@ -1,0 +1,12 @@
+module counter( clk_50M, reset_n, pulse, cnt_value );
+	
+	reg [15:0] cut_value;
+
+	always @( posedge pulse or negedge reset_n )begin
+		if ( !reset_n )
+			cut_value = 0;
+		else
+			cut_value
+	end
+
+endmodule 

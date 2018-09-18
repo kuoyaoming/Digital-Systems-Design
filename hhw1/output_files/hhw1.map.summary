@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr 10 14:58:03 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : hhw1
+Top-level Entity Name : counter
+Family : Cyclone IV E
+Total logic elements : 33
+    Total combinational functions : 17
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 19
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

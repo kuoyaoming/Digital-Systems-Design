@@ -1,0 +1,74 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/kuo/Desktop/hw3
+vhw4
+!s110 1528798146
+!i10b 1
+!s100 J`l;YjXgBhGSd4n>nINE^3
+ITEO_`DRb4Pk:TJ;GH^BX62
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/kuo/Desktop/hw4
+w1528798024
+8C:/Users/kuo/Desktop/hw4/hw4.v
+FC:/Users/kuo/Desktop/hw4/hw4.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1528798146.000000
+!s107 C:/Users/kuo/Desktop/hw4/hw4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kuo/Desktop/hw4/hw4.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vhw4_tb
+Z5 !s110 1528787937
+!i10b 1
+!s100 1ARYKJHWbUaiKUYICCLnK0
+IafID6T_;oSEU6jSRm3cOn2
+R0
+R1
+w1528784527
+8C:/Users/kuo/Desktop/hw4/hw4_tb.v
+FC:/Users/kuo/Desktop/hw4/hw4_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+Z6 !s108 1528787937.000000
+!s107 C:/Users/kuo/Desktop/hw4/hw4_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kuo/Desktop/hw4/hw4_tb.v|
+!i113 1
+R3
+R4
+vM24AA256
+R5
+!i10b 1
+!s100 HYa^aKC;zz]o]FDbi^<RQ1
+IWS5mf8jSh]X0E3O?^eO9J3
+R0
+R1
+w1528784528
+8C:/Users/kuo/Desktop/hw4/M24AA256.v
+FC:/Users/kuo/Desktop/hw4/M24AA256.v
+L0 81
+R2
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/kuo/Desktop/hw4/M24AA256.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/kuo/Desktop/hw4/M24AA256.v|
+!i113 1
+R3
+R4
+n@m24@a@a256

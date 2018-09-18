@@ -1,0 +1,147 @@
+# Reading C:/intelFPGA_pro/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do hhw2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5c Lib Mapping Utility 2017.01 Jan 23 2017
+# vmap work rtl_work 
+# Copying C:/intelFPGA_pro/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/hhw2 {C:/hhw2/hw2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:33:08 on Apr 24,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/hhw2" C:/hhw2/hw2.v 
+# -- Compiling module hw2
+# 
+# Top level modules:
+# 	hw2
+# End time: 15:33:08 on Apr 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/hhw2 {C:/hhw2/F_Div.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:33:08 on Apr 24,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/hhw2" C:/hhw2/F_Div.v 
+# -- Compiling module F_Div
+# 
+# Top level modules:
+# 	F_Div
+# End time: 15:33:08 on Apr 24,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/hhw2 {C:/hhw2/hw2_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 15:33:08 on Apr 24,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/hhw2" C:/hhw2/hw2_tb.v 
+# -- Compiling module hw2_tb
+# 
+# Top level modules:
+# 	hw2_tb
+# End time: 15:33:09 on Apr 24,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  hw2_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" hw2_tb 
+# Start time: 15:33:09 on Apr 24,2018
+# Loading work.hw2_tb
+# ** Error (suppressible): (vsim-19) Failed to access library 'cycloneive_ver' at "cycloneive_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.hw2
+# ** Error (suppressible): (vsim-19) Failed to access library 'cycloneive_ver' at "cycloneive_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.F_Div
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=1
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=8730 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=17410 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=26090 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=60810 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=69490 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=86850 reset_n=1 write=0 write_value= 33 uart_txd=1
+# uart rx data =  33 
+# time=300747 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=301092 reset_n=1 write=1 write_value= 67 uart_txd=1
+# time=301365 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=303850 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=312530 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=329890 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=364610 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=373290 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=381970 reset_n=1 write=0 write_value= 67 uart_txd=1
+# uart rx data =  67 
+# time=601365 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=601810 reset_n=1 write=1 write_value=101 uart_txd=1
+# time=601983 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=607650 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=616330 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=625010 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=633690 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=642370 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=659730 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=677090 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=685770 reset_n=1 write=0 write_value=101 uart_txd=1
+# uart rx data = 101 
+# ** Note: $finish    : C:/hhw2/hw2_tb.v(49)
+#    Time: 901983 ns  Iteration: 0  Instance: /hw2_tb
+# 1
+# Break in Module hw2_tb at C:/hhw2/hw2_tb.v line 49
+add wave -position end sim:/hw2_tb/u1/*
+restart -f
+# ** Error (suppressible): (vsim-19) Failed to access library 'cycloneive_ver' at "cycloneive_ver".
+# No such file or directory. (errno = ENOENT)
+# ** Error (suppressible): (vsim-19) Failed to access library 'cycloneive_ver' at "cycloneive_ver".
+# No such file or directory. (errno = ENOENT)
+run -all
+# GetModuleFileName: 找不到指定的模組。
+# 
+# 
+# time=  0 reset_n=0 write=0 write_value= 33 uart_txd=1
+# time= 30 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=235 reset_n=1 write=1 write_value= 33 uart_txd=1
+# time=747 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=8730 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=17410 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=26090 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=60810 reset_n=1 write=0 write_value= 33 uart_txd=1
+# time=69490 reset_n=1 write=0 write_value= 33 uart_txd=0
+# time=86850 reset_n=1 write=0 write_value= 33 uart_txd=1
+# uart rx data =  33 
+# time=300747 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=301092 reset_n=1 write=1 write_value= 67 uart_txd=1
+# time=301365 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=303850 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=312530 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=329890 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=364610 reset_n=1 write=0 write_value= 67 uart_txd=1
+# time=373290 reset_n=1 write=0 write_value= 67 uart_txd=0
+# time=381970 reset_n=1 write=0 write_value= 67 uart_txd=1
+# uart rx data =  67 
+# time=601365 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=601810 reset_n=1 write=1 write_value=101 uart_txd=1
+# time=601983 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=607650 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=616330 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=625010 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=633690 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=642370 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=659730 reset_n=1 write=0 write_value=101 uart_txd=1
+# time=677090 reset_n=1 write=0 write_value=101 uart_txd=0
+# time=685770 reset_n=1 write=0 write_value=101 uart_txd=1
+# uart rx data = 101 
+# ** Note: $finish    : C:/hhw2/hw2_tb.v(49)
+#    Time: 901983 ns  Iteration: 0  Instance: /hw2_tb
+# 1
+# Break in Module hw2_tb at C:/hhw2/hw2_tb.v line 49
+# End time: 15:36:06 on Apr 24,2018, Elapsed time: 0:02:57
+# Errors: 4, Warnings: 0

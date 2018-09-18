@@ -1,0 +1,41 @@
+|hw2
+clk_50M => clk_50M.IN1
+reset_n => reset_n.IN1
+write => always0.IN1
+write => always0.IN1
+write => write_f.DATAIN
+write_value[0] => d_i.DATAB
+write_value[1] => d_i.DATAB
+write_value[2] => d_i.DATAB
+write_value[3] => d_i.DATAB
+write_value[4] => d_i.DATAB
+write_value[5] => d_i.DATAB
+write_value[6] => d_i.DATAB
+write_value[7] => d_i.DATAB
+uart_txd <= d_r[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw2|F_Div:F_Div
+CLK => CLK_Out~reg0.CLK
+CLK => CLK_Cnt[0].CLK
+CLK => CLK_Cnt[1].CLK
+CLK => CLK_Cnt[2].CLK
+CLK => CLK_Cnt[3].CLK
+CLK => CLK_Cnt[4].CLK
+CLK => CLK_Cnt[5].CLK
+CLK => CLK_Cnt[6].CLK
+CLK => CLK_Cnt[7].CLK
+CLK => CLK_Cnt[8].CLK
+RST => CLK_Cnt[0].ACLR
+RST => CLK_Cnt[1].ACLR
+RST => CLK_Cnt[2].ACLR
+RST => CLK_Cnt[3].ACLR
+RST => CLK_Cnt[4].ACLR
+RST => CLK_Cnt[5].ACLR
+RST => CLK_Cnt[6].ACLR
+RST => CLK_Cnt[7].ACLR
+RST => CLK_Cnt[8].ACLR
+RST => CLK_Out~reg0.ACLR
+CLK_Out <= CLK_Out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

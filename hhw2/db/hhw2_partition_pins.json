@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_txd",
+					"strict" : false
+				},
+				{
+					"name" : "write",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50M",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[5]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[6]",
+					"strict" : false
+				},
+				{
+					"name" : "write_value[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

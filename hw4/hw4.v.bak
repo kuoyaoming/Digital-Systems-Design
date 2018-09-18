@@ -1,0 +1,15 @@
+module hw4(
+    .clk_50M(clk_50M),
+    .reset_n(reset_n),    
+    .write(write),
+    .write_control(write_control),
+    .write_addr(write_addr),
+    .write_value(write_value),
+    .write_complete(write_complete),       
+    // i2c bus
+    .i2c_sda(i2c_sda),
+    .i2c_scl(i2c_scl)
+    ); 
+	 
+
+endmodule 

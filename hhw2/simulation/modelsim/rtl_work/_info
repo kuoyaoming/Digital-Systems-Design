@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/hhw2/simulation/modelsim
+vF_Div
+Z1 !s110 1524555188
+!i10b 1
+!s100 84I4UJW8T0CV9b2HDL@CS2
+Ibd4a0?:8Y9mgX^Afg=3B^0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1524553812
+8C:/hhw2/F_Div.v
+FC:/hhw2/F_Div.v
+L0 1
+Z3 OV;L;10.5c;63
+r1
+!s85 0
+31
+Z4 !s108 1524555188.000000
+!s107 C:/hhw2/F_Div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/hhw2|C:/hhw2/F_Div.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/hhw2
+Z7 tCvgOpt 0
+n@f_@div
+vhw2
+R1
+!i10b 1
+!s100 l[l@Al5@?nO]2jIh?AYS80
+I[6j5KHeMZSHE?]34XCi711
+R2
+R0
+w1524555151
+8C:/hhw2/hw2.v
+FC:/hhw2/hw2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/hhw2/hw2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/hhw2|C:/hhw2/hw2.v|
+!i113 1
+R5
+R6
+R7
+vhw2_tb
+R1
+!i10b 1
+!s100 9cGb7:YAXNCeZhkQJ3`z83
+INUR=kcUd7Xi1g=7AU?1eR2
+R2
+R0
+w1524553953
+8C:/hhw2/hw2_tb.v
+FC:/hhw2/hw2_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/hhw2/hw2_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/hhw2|C:/hhw2/hw2_tb.v|
+!i113 1
+R5
+R6
+R7

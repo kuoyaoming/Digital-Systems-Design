@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at hw03.v(34): always construct contains both blocking and non-blocking assignments File: /home/kuoyaoming/Desktop/hw3/hw03.v Line: 34
